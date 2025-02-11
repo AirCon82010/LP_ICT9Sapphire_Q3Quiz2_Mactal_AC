@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PRACTICE EXERCISE 3</title>
+
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<h1 style="background-color: black;"> SUPER BOWL TICKETING CENTER</h1>
+</head>
+<style>
+        body {
+            background-color: lightgoldenrodyellow;
+            color: white;
+            text-align: center;
+        background-image: url(bg.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+            }
+    </style>
+
+<body>
+
+
+<details style="background-color: rgb(255, 176, 134); text-align: center; color: white; border-radius: 3px;">
+                <summary style="font: 10px;">Pesonal Information</summary>
+            <i>Fill out the form below</i>
+
+            <div style="background-color: lightgoldenrodyellow; text-align: center; color: black;">
+                <br>
+
+                <label style="text-align: center; color: black;">Full Name</label>
+                <input type="text" id="name" class="form-control">
+                <br>
+                <label style="text-align: center; color: black;">Email</label>
+                <input type="text" id="email" class="form-control">
+
+                <br>
+
+                <button type="button" class="btn btn-success" onclick="tenks()">Ticket Price</button>
+                <script>check_discount() {
+                    window.alert('Thank you for the fill, proceed to ticketing area ' + name1);
+                var name1 = document.getElementById('name').value;
+                }
+
+                </script>
+            </div>
+        </details>
+<br>
+ <details style="background-color: rgb(255, 176, 134); text-align: center; color: white; border-radius: 3px;">
+                <summary style="font: 10px;">Ticket Price</summary>
+            <i>Select your ticket price</i>
+    
+    <div style="background-color: lightgoldenrodyellow; text-align: center; color: black;">
+        <form action="">
+            <label for="">
+                Choose your seat:
+            </label>
+            <select class="form-select" id="seat">
+                <option value="none"> Select</option>
+                <option value="800"> GEN-AD</option>
+                <option value="1000"> UPPER-BOX</option>
+                <option value="1500"> LOWER- BOX</option>
+                <option value="2000"> PATRON</option>
+                <option value="2500"> COURT-SIDE</option>
+                <option value="3000"> VIP</option>
+
+            </select>
+            <br>
+            <label> Discount </label>
+            <select class="form-select" id="discount">
+                <option value="none"> Select</option>
+                <option value="0.2"> PWD/SC/STUDENT</option>
+                <option value="0"> Regular</option>
+            </select>
+            <br>
+            <button class="btn btn-success"type="button" onclick="check_discount()"> Ticket Price </button>
+        </form>
+    </div>
+</details>
+
+    <script>
+
+        function check_discount() {
+            var seat1 = document.getElementById('seat').value;
+            var disc1 = document.getElementById('discount').value;
+            var final_rate = seat1- (disc1 * seat1);
+
+            window.alert('Your seat price is ' + final_rate);
+                }
+    </script>
+
+ <br>
+ <details style="background-color: rgb(255, 176, 134); text-align: center; color: white; border-radius: 3px;">
+                <summary style="font: 10px;">Print Ticket</summary>
+            <i>Confirm your ticket</i>
+
+            <img src="ticket.jpg">
+
+            <button class="button" onclick="window.print()">Print</button>
